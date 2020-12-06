@@ -8,10 +8,11 @@ const resolvers = require('./resolvers');
 const MongoClient = require('mongodb').MongoClient;
 
 // Intialize database
-client = new MongoClient(process.env.DATABASE_URL + '/' +  process.env.DATABASE_NAME, { useNewUrlParser: true, useUnifiedTopology: true });
+client = new MongoClient(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(function (err) {
-	console.log("MONGOdb connected");
-  clientDB = client.db(process.env.DATABASE_NAME || "access_afya_analytics"); 
+	console.log("MONGOdb connected and authenticated ");
+
+	clientDB= client.db(process.env.DATABASE_NAME || "access_afya_asnalytics"); 
 });
 
 
