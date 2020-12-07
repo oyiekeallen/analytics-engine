@@ -83,7 +83,7 @@ Use schema to guide on how to make requests and the allowed data types
 ```
 
 
-## Query samples
+## Query Template
 ```
   # Tes if server is up
   hello: String
@@ -97,7 +97,7 @@ Use schema to guide on how to make requests and the allowed data types
   getClinicAnalyticsByDuration(clinicIdentifier: String!, periodStart: String, periodEnd: String): ClinicData
 ```
 
-## Mutation samples
+## Mutation Template
 
 ```
   # Create clinic Analytic Record
