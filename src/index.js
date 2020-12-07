@@ -24,7 +24,7 @@ const server = new ApolloServer({
 
 
 
-server.listen().then(() => {
+server.listen(process.env.PORT).then(() => {
   console.log(`
     Analytics Engine is now running!
     Listening on port 
