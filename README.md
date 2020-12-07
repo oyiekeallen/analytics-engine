@@ -4,17 +4,27 @@ Uses Apollo graphql and mongo as data source
 
 
 ## Instructions
+
+- Install dependecies
 ```
-# Install dependecies
-npm install
+  npm install
+```
 
-# To start sever
+- Start sever
+```
 npm run start
+```
 
+- Add env parameters. Create an .env file and add the following
+```
+PORT= <port>
+DATABASE_URL= <url>
+DATABASE_NAME= <name>
 ```
 
 ## Schema 
 Use schema to guide on how to make requests and the allowed data types 
+
 ```
 	input ClinicAnalytic {
 		clinicName: String
@@ -90,15 +100,15 @@ Use schema to guide on how to make requests and the allowed data types
 ## Mutation samples
 
 ```
-    # Create clinic Analytic Record
-		createClinicAnalytic(
-      clinicName: String, clinicIdentifier: String, periodStart: String, periodEnd: String, footFall: Int, patientStatisfation: Float, revenue: Float, issues: [IssueInput], staff: [StaffInput] 
-      ): ClinicData
+  # Create clinic Analytic Record
+  createClinicAnalytic(
+    clinicName: String, clinicIdentifier: String, periodStart: String, periodEnd: String, footFall: Int, patientStatisfation: Float, revenue: Float, issues: [IssueInput], staff: [StaffInput] 
+    ): ClinicData
 
-    # Update Clinic Analytic record
-		updateClinicAnalytic(
-      id: String, periodStart: String, periodEnd: String, footFall: Int, patientStatisfation: Float, revenue: Float, issues: [IssueInput], staff: [StaffInput]
-      ): ClinicData
+  # Update Clinic Analytic record
+  updateClinicAnalytic(
+    id: String, periodStart: String, periodEnd: String, footFall: Int, patientStatisfation: Float, revenue: Float, issues: [IssueInput], staff: [StaffInput]
+    ): ClinicData
 
 ```
 
