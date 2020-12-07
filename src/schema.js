@@ -4,7 +4,6 @@ const typeDefs = gql`
 
 	type Query {
 		hello: String
-		getClinicsAnalytics: [ClinicData]
 		getClinicAnalyticsById(id: String!): ClinicData
 		getClinicAnalyticsByDuration(clinicIdentifier: String!, periodStart: String, periodEnd: String): ClinicData
 	} 
